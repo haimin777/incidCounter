@@ -1,9 +1,9 @@
 # Incident Counting Solution
 
-Incident counting strategy: create dict with keys of incidents values and values? containing lists of time series
+Incident counting strategy: create dict with keys of incidents values and values, containing lists of time series
 ## Getting Started
 
-To run project according to tests, we need to run docker container with lact Anaconda anp python3
+To run project according to tests, we need to run docker container with last Anaconda and python3
 
 ### Prerequisites
 
@@ -17,68 +17,26 @@ install according your system
 Run this steps to perform incident counting on test file
 
 ```
-Give the example
-```
-
-And repeat
+git clone https://github.com/haimin777/incidCounter.git
+cd incidCounter
 
 ```
-until finished
-```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+Run docker anaconda in current directory
 
 ```
-Give an example
+docker pull continuumio/anaconda3
+docker run -v `pwd`:/home -it continuumio/anaconda3 /bin/bash
+cd home/
+python incident_finder.py -i input.csv -o output.csv -t 0.3
 ```
 
-### And coding style tests
+In result you can see execution time and output file in current directory
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Alex Haimin** 
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 
