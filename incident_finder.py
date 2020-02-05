@@ -44,11 +44,12 @@ class incidentCounter():
                 self.incident_dict[incident] = [incid_time]
 
             else:
-                if self.incident_dict[incident][-1] >= incid_time:
+                self.incident_dict[incident].append(incid_time)
 
-                    self.incident_dict[incident].insert(0, incid_time)
-                else:
-                    self.incident_dict[incident].append(incid_time)
+        # sort time values for future search
+
+        for key in self.incident_dict.keys():
+            self.incident_dict[key].sort()
 
     def counting(self):
 
