@@ -38,7 +38,7 @@ class incidentCounter():
         for f1, f2, incid_time in zip(self.df['feature1'], self.df['feature2'], self.df['time']):
             incident = str(f1) + str(f2)
 
-            # insert time values in sorted order
+            # insert time values
 
             if incident not in self.incident_dict.keys():
                 self.incident_dict[incident] = [incid_time]
